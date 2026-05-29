@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <h1>Details of Marks</h1>
+    {% for i in d.marks %}
+        <p>{{i}}</p>
+    {% endfor %}
+    <a href="{% url 'fun1' %}">Back</a>
+    <div>
+        <h1>Upper</h1>
+        {% for i in d.n %}
+            <p>{{i|upper}}</p>
+        {% endfor %}
+    </div>
+    <div>
+        <h1>Lower</h1>
+        {% for i in d.n %}
+            <p>{{i|lower}}</p>
+        {% endfor %}
+    </div>
+    <div>
+        <h1>Length greater than 3</h1>
+        {% for i in d.n %}
+            {% if i|length > 3 %}
+                <p>{{i}}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div>
+        <h1>Length less than 3</h1>
+        {% for i in d.n %}
+            {% if i|length < 3 %}
+                <p>{{i}}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
