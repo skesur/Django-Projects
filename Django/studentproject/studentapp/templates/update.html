@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        name : <input type="text" name="name" id="" value="{{i.name}}"><br><br>
+        rollno : <input type="number" name="rollno" id="" value="{{i.rollno}}"><br><br>
+        enroll : <input type="number" name="enroll" id="" value="{{i.enroll}}"><br><br>
+        batch : <input type="text" name="batch" id="" value="{{i.batch}}"><br><br>
+        date : <input type="date" name="date" id="" value="{{i.date|date:'Y-m-d'}}"><br><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
