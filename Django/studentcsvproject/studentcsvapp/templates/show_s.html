@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in data %}
+        <li>name : {{i.name}}</li>
+        <li>enroll : {{i.enroll}}</li>
+        <li>email : {{i.email}}</li>
+        <li>dep_name : {{i.dep_name}}</li>
+        <li><a href="{% url "delete" i.id %}">Delete</a></li>
+        <br><br>
+    {% endfor %}
+</body>
+</html>
